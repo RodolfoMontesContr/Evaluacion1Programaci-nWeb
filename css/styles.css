@@ -15,3 +15,85 @@
     width: 200px;
     height: 200px;
 }
+
+.bInicio a{
+
+    float: left;
+    position: relative;
+    bottom: 865px;
+    text-decoration: none;
+    background-color: white;
+    width: 100px;
+    padding: 5px;
+    border: 3px solid black;
+    color: black;
+    
+    
+}
+
+.bInicio a:hover{
+
+    background-color: gray;
+
+}
+
+
+
+body{
+
+    font-family: Arial; box-sizing: border-box;;
+}
+
+form{
+
+    margin: 0 auto;
+    width: 300px;
+    padding: 40px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+input, textarea{
+
+    outline: none;
+    
+    
+}
+
+.btn{
+
+    border-radius: 3px;
+    display:  inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+
+}
+
+.btn-green{
+
+    color: white;
+    background-color: #3CC93F;
+}
+.btn-green:hover{
+
+    color: white;
+    background-color: #37B839;
+}
+.encabezado a{
+
+    float: right;
+    position: relative;
+    bottom: 225px;
+    left: 10px;
+    padding: 5px;
+    border-color: red;
+    background-color:white;
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+    width: 170px;
+    
+    
+}
