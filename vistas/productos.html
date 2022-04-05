@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <header class="color_header">
+<body class="page_color">
+    <header>
         <div class="conainer-fluid">
             <p class="h1 text-center">Tienda de mascotas</p>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light center pt-4 color_header">
+        <nav class="navbar navbar-expand-lg navbar-light center pt-4 page_color">
             <div class="container-fluid mx-auto" style="width: 500px">
                 <form class="d-flex col-8 pe-3">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-outline-warning" type="submit">Buscar</button>
                   </form>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,21 +52,21 @@
     </header>
     <a href=""> <img src="../img/gato.jpg" alt="gato"  class="gato img-fluid mx-auto d-block"> </a>
 <main>
-    <div class="container-fluid pt-5 border border-dark">
+    <div class="container-fluid pt-5">
       <div class="d-flex justify-content-center pb-3">
-        <button type="button" class="btn btn-outline-dark">Precio</button>
-        <button type="button" class="btn btn-outline-dark">Agregados recientemente</button>
-        <button type="button" class="btn btn-outline-dark">Populares</button>
+        <button type="button" class="btn btn-outline-warning">Precio</button>
+        <button type="button" class="btn btn-outline-warning">Agregados recientemente</button>
+        <button type="button" class="btn btn-outline-warning">Populares</button>
       </div>
-      <div class="row">
-        <div class="col-2 border border-dark color_header">
+      <div class="row border border-dark colores_elementos">
+        <div class="col-2 border border-dark">
           <p class="h5"> Filtros</p>
           <p><input type="checkbox" name="" id="Categoria">Categoria</p>
           <p><input type="checkbox" name="" id="Tipomascota">Tipo Mascota</p>
           <p><input type="checkbox" name="" id="">Marca</p>
           <p><input type="checkbox" name="" id="">Rango de precios</p>
         </div>
-        <div class=" row col-8 ">
+        <div class=" row col-8">
           <div class="col text-center">
             <a href="./Fichasproducto/Bandana_perro.html"><img src="../img/bandana_perro.jpg" alt="" class="producto_destacado border border-dark"></a>
             <p class="h5"> Bandana perro <br> $6.990</p>

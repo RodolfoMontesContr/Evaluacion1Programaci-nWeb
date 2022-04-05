@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <header class="color_header">
+<body class="page_color">
+    <header>
         <div class="conainer-fluid">
             <p class="h1 text-center">Tienda de mascotas</p>
         </div>
@@ -17,7 +17,7 @@
             <div class="container-fluid mx-auto" style="width: 500px">
                 <form class="d-flex col-8 pe-3">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-outline-warning" type="submit">Buscar</button>
                   </form>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,6 +42,9 @@
                   <li class="nav-item">
                     <a class="nav-link text-nowrap" href="../iniciarsesion.html">Iniciar sesion</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./cuenta.html">Cuenta</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -51,13 +54,13 @@
 <main>
     <div class="container-fluid pt-5 border border-dark">
       <div class="row">
-        <div class="col-md-2 border border-dark color_header">
+        <div class="col-md-2 border border-dark colores_elementos">
           <p class="h5">Mi cuenta</p>
           <a href="#" style="text-decoration: none; color: black;"> Historial de compras</a><br>
           <a href="#" style="text-decoration: none; color: black;"> Estado de compras</a><br>
           <a href="#" style="text-decoration: none; color: black;"> Información de la cuenta</a><br>
         </div>
-        <div class="col-8 border border-dark offset-md-1">
+        <div class="col-8 border border-dark offset-md-1 colores_elementos">
           <p class="h4">Historial de compras</p>
           <div class="row">
             <img src="../img/bandana_perro.jpg" alt="bandana_perro" class="producto_destacado col-2">
@@ -66,7 +69,7 @@
                               Fecha de compra 04/04/2022
                               <button type="button" class="btn btn-info col offset-md-4">Información adicional</button></p>
           </div>
-          <div class="row">
+          <div class="row pt-2">
             <img src="../img/cascabel_gato.jpg" alt="cascabel_gato" class="producto_destacado col-2">
             <p class="col h5">Nombre producto: Cascabel gato <br>
                               ID compra: 2246722 <br>
