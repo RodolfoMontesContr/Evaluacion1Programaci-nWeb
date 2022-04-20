@@ -53,18 +53,15 @@
         </div>
       </nav>
       
-      <a href=""> <img src="./img/gato.jpg" alt="gato"  class="gato img-fluid mx-auto d-block"> </a>
-      <main class="pb-5 pt-5">
-      <form action="" class="border border-dark colores_elementos">
-
-        <p>Correo o Usuario</p>
-        <input type="text" class="field">
-        <br>
-    
-        <p>Contraseña</p>
-        <input type="text" class="field">
-        <br><br>
-    
+      <form method="post" action="procesar.php">
+        <div class="form-group">
+          <label for="nombre">Nombre: </label>
+          <input type="text" class="from control" id="nombre" name="nombre">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electronico: </label>
+          <input type="email" class="from control" id="email" name="email"> 
+        </div>
         <input type="button" class="btn btn-green" value="Iniciar Sesion">
     
     
