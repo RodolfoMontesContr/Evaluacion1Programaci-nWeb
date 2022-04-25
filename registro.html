@@ -57,63 +57,83 @@
     <main class="pb-5 pt-5">
       <form action="" class="border border-dark colores_elementos">
 
-        <br>
+
         <script>
-        function validar(){
-          //obtengo el valor del input 
-          //y elimino espacios al inicio y final del mismo
-          var nombre = $.trim($("#nombre").val());
-          //verifico si tiene un valor 
-          if(nombre == '' || nombre == null){
-            $("#nombre").val(null);
-            alert('Ingrese el nombre.');
-            return false;
-          }
-        }//end function validar
-
+          $(document).ready(function(){
+              //Ocultar Alerta cuando cargue la pagina
+              $("#alertaNombre").hide();
+              var mensaje = "";
+              $("#alertaNombre").html(mensaje);
+              //si nombre pierde el foco
+              $("#nombre").focusout(function(){
+                  // si no hay caracteres, mostramos alerta
+                  if ($("#nombre").val().trim().length == 0) {
+                      mensaje = "Debe ingresar un Nombre";
+  
+                  } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaNombre").hide();
+                  }
+              })
+              $("#email").focusout(function(){
+                  // si no hay caracteres, mostramos alerta
+                  if ($("#email").val().trim().length == 0) {
+                      mensaje = "Debe ingresar un Email";
+  
+                  } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaNombre").hide();
+                  }
+              })
+  
+              $("#formulario").submit(function(){
+                  debugger;
+                  if(mensaje.length >= 0){
+                      $("#alertaNombre").html(mensaje);
+                      $("#alertaNombre").show();
+                      event.preventDefault();
+                  }
+              })
+  
+  
+          });
       </script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <input type="text" name="nombre" id="nombre">
-        <button onclick="validar();">Validar</button>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<div id="esd-names">
-  <div id="name"></div>
-</div>
-
-        <p>Nombre Completo</p>
-        <input type="text" class="field">
-        <br><br>
-    
-        <p>Telefono</p>
-        <input type="text" class="field">
-        <br><br>
-
-        <p>Edad</p>
-        <input type="text" class="field">
-        <br><br>
-
-        <p>Correo</p>
-        <input type="text" class="field">
-        <br><br>
-
-        <p>Direccion</p>
-        <input type="text" class="field">
-        <br><br>
-
-        <p>Contraseña</p>
-        <input type="text" class="field">
-        <br><br>
-    
-        <input type="button" class="btn btn-green" value="Registrarse">
-    
-    
+  </head>
+  <body>
+      <h1>
+          Registro
+          <br>
+          <br>
+      </h1>
+  
+      <div class="container">
+          <div class="row">
+              <form action="" method="post" id="formulario">
+                  <div class="form-group">
+                      <div class="alert alert-danger" id="alertaNombre" role="alert">
+                         Debe ingresar un nombre!
+                        </div>
+                      <label for="nombre">Nombre Completo:</label>
+                      <input type="text" class="form-control" name="nombre" id="nombre">
+                      <br>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" name="email" id="email">
+                      <br>
+                  </div>
+                  <input type="submit" value="Enviar" class="btn btn-primary">
+                  <br>
+                  <input type="reset" value="Limpiar" class="btn btn-danger" style="border-top-width: 1px;margin-top: 16px;">
+              </form>
+          </div>
+      </div>
     
       </form>
 
-    
-        
+      
+
 
     </main>
 
