@@ -10,7 +10,7 @@
     <title>Registro</title>
 
         <script>
-          $(document).ready(function(){
+          $("#Registro").ready(function(){
               //Ocultar Alerta cuando cargue la pagina
               $("#alertaNombre").hide();
               var mensaje = "";
@@ -45,33 +45,9 @@
                       event.preventDefault();
                   }
               })
-  
-  
-          });
-          function validaRut(rut){ 
-          var suma=0; 
-          var arrRut = rut.split("-"); 
-          var rutSolo = arrRut[0]; 
-          var verif = arrRut[1]; 
-          var continuar = true; 
-          for(i=2;continuar;i++){ 
-          suma += (rutSolo%10)*i; 
-          rutSolo = parseInt((rutSolo /10)); 
-          i=(i==7)?1:i; 
-          continuar = (rutSolo == 0)?false:true; 
-        }
-         resto = suma%11; dv = 11-resto; 
-         if(dv==10){  
-            if(verif.toUpperCase() == 'K') return true;
-         }else if (dv == 11 && verif == 0)
-          return true; 
-          else if (dv == verif) return true; 
-          else alert("RUT incorrecto, ingréselo en el formato 11111111-1");
-          return false;
-          
-       
-      }
+      });
       </script>
+
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light page_color center pt-4">
@@ -136,28 +112,57 @@
                   <input type="text" class="form-control" name="nombre" id="nombre">
                   <br>
                 </div>
+
                 <br>
                 <div class="form-group">
                   <label for="email">Email:</label>
                   <input type="email" class="form-control" name="email" id="email">
                   <br>
                 </div>
-                
-                <div class="form-group">
-                  <div class="alert alert-danger" id="alertaRUT" role="alert">
-                    Debe ingresar un RUT!
-                  </div>
+
+                <br>
+                <div>
                   <label for="rut">RUT:</label>
                   <input type="text" class="form-control" name="rut" id="rut">
                   <br>
                 </div>
+
                 <br>
+                <div>
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" class="form-control" name="direcicon" id="direccion">
+                  <br>
+                </div>
+
+                <br>
+                <div>
+                  <label for="telefono">Teléfono/Celular:</label>
+                  <input type="text" class="form-control" name="telefono" id="telefono">
+                  <br>
+                </div>
+
+                <br>
+                <div>
+                  <label for="contraseña">Contraseña:</label>
+                  <input type="text" class="form-control" name="contraseña" id="contraseña">
+                  <br>
+                </div>
+
+                <br>
+                <div>
+                  <label for="formatopago">Formato de Pago</label>
+                  <input type="text" class="form-control" name="formatopago" id="formatopago">
+                  <br>
+                </div>
+
                 <input type="submit" value="Enviar" class="btn btn-primary">
                 <br>
                 <input type="reset" value="Limpiar" class="btn btn-danger" style="border-top-width: 1px;margin-top: 16px;">
               </form>
           </div>
       </div>
+
+      
       
             
 
