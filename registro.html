@@ -54,7 +54,61 @@
                   
                       event.preventDefault();
                   }
-              });        
+              });
+
+              $("#alertaNombre").hide();
+              var mensaje = "";
+
+              $("#alertaNombre").html(mensaje);
+              $("#direccion").focusout(function(){
+                  // si no hay caracteres, mostramos alerta
+                  if ($("#direccion").val().trim().length == 0) {
+                      mensaje = "Debe ingresar una Dirección";
+                      $("#alertaNombre").html(mensaje);
+                      $("#alertaNombre").show(mensaje);
+                      event.preventDefault();
+
+                    } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaNombre").hide();
+                  }
+                });
+
+                $("#alertaNombre").hide();
+              var mensaje = "";
+
+              $("#alertaNombre").html(mensaje);
+              $("#telefono").focusout(function(){
+                  // si no hay caracteres, mostramos alerta
+                  if ($("#telefono").val().trim().length == 0) {
+                      mensaje = "Debe ingresar un Teléfono/Celular";
+                      $("#alertaNombre").html(mensaje);
+                      $("#alertaNombre").show(mensaje);
+                      event.preventDefault();
+
+                    } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaNombre").hide();
+                  }
+                })
+
+                $("#alertaNombre").hide();
+              var mensaje = "";
+
+              $("#alertaNombre").html(mensaje);
+              $("#contraseña").focusout(function(){
+                  // si no hay caracteres, mostramos alerta
+                  if ($("#contraseña").val().trim().length == 0) {
+                      mensaje = "Debe ingresar una Contraseña";
+                      $("#alertaNombre").html(mensaje);
+                      $("#alertaNombre").show(mensaje);
+                      event.preventDefault();
+
+                    } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaNombre").hide();
+                  }
+                })
              
       });
       </script>
@@ -156,14 +210,15 @@
                 <br>
                 <div>
                   <label for="contraseña">Contraseña:</label>
-                  <input type="text" class="form-control" name="contraseña" id="contraseña">
+                  <input type="password" name="password" type="text" class="form-control" name="contraseña" id="contraseña" size="10">
                   <br>
                 </div>
 
                 <br>
                 <div>
-                  <label for="formatopago">Formato de Pago</label>
-                  <input type="text" class="form-control" name="formatopago" id="formatopago">
+                  <label for="formatopago">Confirmar Contraseña:</label>
+                  <input type="password" name="password" type="text" class="form-control" name="confirmarcontraseña" id="confirmarcontraseña" size="10">
+                  <br>
                   <br>
                 </div>
 
