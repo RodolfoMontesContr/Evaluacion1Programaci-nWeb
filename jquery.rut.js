@@ -19,7 +19,7 @@
 
 //		Para obtener este programa bajo otra licencia, póngase en
 //		contacto con @pablomarambio en Twitter.
-;(function($){
+	;(function($){
 	var defaults = {
 		validateOn: 'blur',
 		formatOn: 'blur',
