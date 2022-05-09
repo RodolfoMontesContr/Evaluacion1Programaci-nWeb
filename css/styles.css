@@ -198,3 +198,7 @@ div{
 header{
     color: white;
 }
+
+#viewPassword{
+    cursor:pointer;
+  }

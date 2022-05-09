@@ -7,8 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Iniciar Sesion</title>
+    <title>IniciarSesion</title>
 </head>
+
+<script>
+
+        $("#IniciarSesion").ready(function(){
+          //Ocultar Alerta cuando cargue la pagina
+          $("#alertaSesion").hide();
+          var mensaje = "";
+          $("#alertaSesion").html(mensaje);
+          //si nombre pierde el foco
+          $("#sesion").focusout(function(){
+            // si no hay caracteres, mostramos alerta
+              if ($("#sesion").val().trim().length == 0) {
+                  mensaje = "Debe ingresar un Correo Electrónico";
+                    $("#alertaSesion").html(mensaje);
+                    $("#alertaSesion").show();
+
+              } else {
+                  //si hay caracteres, ocultamos la alerta
+                  $("#alertaSesion").hide();
+                }
+          });
+
+            $("#alertaSesion").hide();
+              var mensaje = "";
+
+              $("#alertaSesion").html(mensaje);
+              $("#contraseñaSesion").focusout(function(){
+                  // si no hay caracteres, mostramos alerta
+                  if ($("#contraseñaSesion").val().trim().length == 0) {
+                      mensaje = "Debe ingresar una Contraseña";
+                      $("#alertaSesion").html(mensaje);
+                      $("#alertaSesion").show(mensaje);
+                      event.preventDefault();
+
+                    } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaSesion").hide();
+                  }
+                })
+            });
+
+          $(InciarSesion).ready(function () {
+            $('#mostrar_contrasena').click(function () {
+              if ($('#mostrar_contrasena').is(':checked')) {
+               $('#contrasena').attr('type', 'text');
+                } else {
+                  $('#contrasena').attr('type', 'password');
+                }
+              })
+        });
+
+            
+
+</script>
+
 <body class="page_color">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light center">
@@ -48,29 +103,55 @@
           </div>
         </nav>
   </header>
-      
-      <form method="post" action="procesar.php">
-        <div class="form-group">
-          <label for="nombre" class="text-dark">Correo Electronico: </label>
-          <input type="text" class="from control" id="nombre" name="nombre">
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="email" class="text-dark">Contraseña: </label>
-          <input type="email" class="from control" id="email" name="email"> 
-        <br>
-        <br>
-          <input type="submit" class="btn btn-danger" id="Enviar" value="Enviar" style="margin-right: 15px;">
-          <input type="reset" class="btn btn-primary" id="Limpiar" value="Limpiar">
-          <br>
-          <br>
-          <input type="button" class="btn btn-green" value="Iniciar Sesion">
-      </form>
-    </main>
-    
-        
+      <form  id="iniciar Sesion" class="border border-dark colores_elementos">
 
-    </div>
+        <div class="form-group">
+        <div class="alert alert-danger" id="alertaSesion" role="alert">
+          </div>
+        <label for="sesion">Correo Electrónico:</label>
+          <br>
+        <input type="text" class="form-control" name="sesion" id="sesion">
+          <br>
+        </div>
+
+        <form action="" method="post" id="frmLogin">
+          <div class="error-mensaje">
+          <div class="form-group">
+              <div class="col">
+                <label for="password">Contraseña</label>
+                <input name="usuario_password" type="password" value="" class="form-control" id="contrasena">
+            </div>
+              <div class="col">
+                <label for="password"></label>
+                <!-- checkbox que nos permite activar o desactivar la opcion -->
+                <div style="margin-top:15px;">
+                  <input style="margin-left:20px;" type="checkbox" id="mostrar_contrasena" title="clic para mostrar contraseña"/>
+                  &nbsp;&nbsp;Mostrar Contraseña</div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="form-check">
+            <input type="checkbox" name="remember" id="remember" class="form-check-input"/>
+            <label for="remember-me">Recordarme</label>
+          </div>
+          <div class="form-group">
+            <input type="submit" name="login" value="Iniciar Sesión"
+                  class="btn btn-primary">
+          </div>
+          <br>
+          <div>
+            <input type="submit" class="btn btn-danger" id="Enviar" value="Enviar" style="margin-right: 15px;">
+            <input type="reset" class="btn btn-primary" id="Limpiar" value="Limpiar">
+            <br>
+            <br>
+            <input type="button" class="btn btn-green" value="Iniciar Sesion">
+        </form>
+      </main>   
+      </div>
+        </form>
+        
+    
     <footer class="footer__background colores_elementos">
       <div class="footer__lista">
           <div class="footer__lista--div">

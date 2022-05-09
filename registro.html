@@ -90,7 +90,7 @@
                       //si hay caracteres, ocultamos la alerta
                       $("#alertaNombre").hide();
                   }
-                })
+                });
 
                 $("#alertaNombre").hide();
               var mensaje = "";
@@ -108,9 +108,35 @@
                       //si hay caracteres, ocultamos la alerta
                       $("#alertaNombre").hide();
                   }
-                })
-             
-      });
+                }) 
+            });
+
+            
+            let password = Registro.getElementById('password');
+            let viewPassword = Registro.getElementById('viewPassword');
+            let click = false;
+
+            viewPassword.addEventListener('click', (e)=>{
+            if(!click){
+            password.type = 'text'
+            click = true
+            }else if(click){
+            password.type = 'password'
+            click = false
+          }
+        });
+
+            if($('div').smockValidateEqualPass('form #password1', 'form #password2')){
+              mensaje = "Contraseñas no son iguales";
+                      $("#alertaContraseña").html(mensaje);
+                      $("#alertaContraseña").show(mensaje);
+                      event.preventDefault();
+
+                    } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaContraseña").hide();
+            }
+            
       </script>
 
 </head>
@@ -171,7 +197,7 @@
               </h1>
 
                 <div class="form-group">
-                  <div class="alert alert-danger" id="alertaNombre" role="alert">
+                  <div class="alert alert-danger" id="alertaNombre alertaNombre" role="alert">
                   </div>
                   <label for="nombre">Nombre Completo:</label>
                   <input type="text" class="form-control" name="nombre" id="nombre">
@@ -212,17 +238,16 @@
                 <br>
                 <div>
                   <label for="contraseña">Contraseña:</label>
-                  <input type="password" name="password" type="text" class="form-control" name="contraseña" id="contraseña" size="10">
-                  <br>
-                </div>
-
-                <br>
-                <div>
-                  <label for="formatopago">Confirmar Contraseña:</label>
-                  <input type="password" name="password" type="text" class="form-control" name="confirmarcontraseña" id="confirmarcontraseña" size="10">
+                  <input type="password" type="text" class="form-control" id="password1">
                   <br>
                   <br>
-                </div>
+                  <div>
+                  <label for="confirmarcontraseña">Confirmar Contraseña:</label>
+                  <br>
+                  <input type="password" type="text" class="form-control" id="password2" required>
+                  <br>
+                  <a id="viewPassword">Mostrar contraseña</a>
+                </div>  
 
                 <input type="submit" value="Enviar" class="btn btn-primary">
                 <br>
