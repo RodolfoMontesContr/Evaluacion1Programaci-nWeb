@@ -104,23 +104,13 @@ input, textarea{
 }
 
 .page_color{
-    background-color: green;
+    background-color: #ffffff;
 }
 
 .colores_elementos{
-    background-color: orange;
+    background-color:purple;
 }
 
-.nav-link:hover{
-    -webkit-transition: 0.1ms;
-    -moz-transition: 0.1ms;
-    transition: 0.1ms;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    border-radius: 20px;
-    background-color: orange;
-}
 
 
 .footer__background{
@@ -143,21 +133,21 @@ input, textarea{
 }
 .footer__titulos{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #03045e;
+    color: white;
     font-size: 110%;
     font-weight: bold;
     padding-top: 5px;
 }
 .footer__items{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #03045e;
+    color: white;
     font-size: 110%;
     padding-top: 10px;
     text-decoration: none;
 }
 .footer__items2{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #03045e;
+    color: white;
     font-size: 110%;
     padding-top: 7%;
     text-decoration: none;
@@ -185,4 +175,26 @@ input, textarea{
 }
 .footer__items--redes:hover{
   transform: scale(1.2);
+}
+
+header,nav{
+   background-color: purple;
+}
+
+#text{
+    color:whitesmoke
+}
+
+li{
+    color: whitesmoke;
+}
+
+.texto{
+    color: white;
+}
+div{
+    color: white;
+}
+header{
+    color: white;
 }
