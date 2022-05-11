@@ -125,3 +125,8 @@ document.addEventListener('input', (e) => {
     return suma ? suma - 1 : 'K';
   }
   
+
+  $("#Enviar").submit(function(event){
+    loadAjax();
+    event.preventDefault()
+ })

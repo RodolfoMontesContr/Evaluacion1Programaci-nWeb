@@ -46,24 +46,6 @@
                       $("#alertaEmail").hide();
                   }
               });
-
-              $("#alertaRUT").hide();
-              var mensaje = "";
-              $("#alertaRUT").html(mensaje);
-              //si nombre pierde el foco
-              $("#rut").focusout(function(){
-                  // si no hay caracteres, mostramos alerta
-                  if ($("#rut").val().trim().length == 0) {
-                      mensaje = "Debe ingresar un Rut";
-                      $("#alertaRUT").html(mensaje);
-                      $("#alertaRUT").show();
-
-                  } else {
-                      //si hay caracteres, ocultamos la alerta
-                      $("#alertaRut").hide();
-                  }
-              });
-
               $("#alertaDireccion").hide();
               var mensaje = "";
               $("#alertaDireccion").html(mensaje);
@@ -178,8 +160,7 @@
                 <br>
                 <div>
                   <div class="form-group">
-                    <div class="salida" id="alertaRUT" role="alert">
-                    </div>
+                    <div class="salida"></div>
                   <label for="rut">RUT:</label>
                   </div>
                   <input type="test" class="form-control" name="rut" id="rut">
@@ -224,7 +205,7 @@
               <span id="error2"></span>
 
 
-                <button type="submit" onclick= "return EnviarFormulario()" id="Enviar" class="btn btn-primary">Enviar</button>
+                <button type="submit" id="Enviar" class="btn btn-primary">Enviar</button>
                 <br>
                 <input type="reset" value="Limpiar" class="btn btn-danger" style="border-top-width: 1px;margin-top: 16px;">
               </form>
@@ -261,12 +242,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
-<script>
-  $(function() {
-      $("#rut").rut().focusout('rutValido', function(e, rut, dv) {
-          alert("El rut " + rut + "-" + dv + " es correcto");
-      }, { minimumLength: 7} );
-  })
-  </script>
   <script src="validaciones.js"></script>
 </html>
