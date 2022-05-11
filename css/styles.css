@@ -211,3 +211,7 @@ header{
 .mostrar {
     display: block;
 }
+
+.hola {
+    color: red;
+}

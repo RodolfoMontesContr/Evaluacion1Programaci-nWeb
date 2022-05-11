@@ -99,7 +99,6 @@
               });
             
             function verificarPasswords() {
- 
              // Acá va el código 
               // Ontenemos los valores de los campos de contraseñas 
               pass1 = document.getElementById('pass1');
@@ -270,24 +269,11 @@
                   <div class="alert alert-danger" id="alertaTelefono" role="alert">
                   </div>
                   <label for="telefono">Teléfono/Celular:</label>
-                  <input type="text" class="form-control" name="telefono" id="telefono">
+                  <input type="text" alt="number" class="form-control" name="telefono" id="telefono">
                   <br>
                 </div>
 
                 <br>
-
-                <div id="msg"></div>
-
-                <!-- Mensajes de Verificación -->
-
-                <div id="error" class="alert alert-danger ocultar" role="alert">
-                    Las Contraseñas no coinciden, vuelve a intentar !
-                </div>
-                <div id="ok" class="alert alert-success ocultar" role="alert">
-                    Las Contraseñas coinciden ! (Procesando formulario ... )
-                </div>
-
-                <!-- Fin Mensajes de Verificación -->
 
                 <div class="form-group">
                   <label for="pass1">Contraseña:</label>
@@ -301,7 +287,20 @@
                   <br>
               </div>
 
-                <input type="submit" value="Enviar" class="btn btn-primary">
+                <!-- Mensajes de Verificación -->
+
+               <div id="error" class="alert alert-danger ocultar" role="alert">
+                Las Contraseñas no coinciden, vuelve a intentar !
+              </div>
+              <div id="ok" class="alert alert-success ocultar" role="alert">
+                Las Contraseñas coinciden ! (Procesando formulario ... )
+              </div>
+
+                <!-- Fin Mensajes de Verificación -->
+                
+                <div id="msg"></div>
+
+                <button type="submit" id="Enviar" class="btn btn-primary">Enviar</button>
                 <br>
                 <input type="reset" value="Limpiar" class="btn btn-danger" style="border-top-width: 1px;margin-top: 16px;">
               </form>
