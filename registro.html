@@ -111,21 +111,6 @@
                 }) 
             });
 
-            
-            let password = Registro.getElementById('password');
-            let viewPassword = Registro.getElementById('viewPassword');
-            let click = false;
-
-            viewPassword.addEventListener('click', (e)=>{
-            if(!click){
-            password.type = 'text'
-            click = true
-            }else if(click){
-            password.type = 'password'
-            click = false
-          }
-        });
-
             if($('div').smockValidateEqualPass('form #password1', 'form #password2')){
               mensaje = "Contraseñas no son iguales";
                       $("#alertaContraseña").html(mensaje);
@@ -246,7 +231,6 @@
                   <br>
                   <input type="password" type="text" class="form-control" id="password2" required>
                   <br>
-                  <a id="viewPassword">Mostrar contraseña</a>
                 </div>  
 
                 <input type="submit" value="Enviar" class="btn btn-primary">
