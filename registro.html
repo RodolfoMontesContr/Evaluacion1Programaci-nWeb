@@ -246,7 +246,7 @@
                 <br>
                 <div>
                   <div class="form-group">
-                    <div class="alert alert-danger" id="alertaRUT" role="alert">
+                    <div class="salida" id="alertaRUT" role="alert">
                     </div>
                   <label for="rut">RUT:</label>
                   </div>
@@ -268,8 +268,9 @@
                   <div class="form-group"></div>
                   <div class="alert alert-danger" id="alertaTelefono" role="alert">
                   </div>
+                  <span id="errorfono"></span>
                   <label for="telefono">Teléfono/Celular:</label>
-                  <input type="text" alt="number" class="form-control" name="telefono" id="telefono">
+                  <input type="tel" alt="number" class="form-control" name="telefono" id="telefono" placeholder="+56911111111" size="12">
                   <br>
                 </div>
 
@@ -286,6 +287,7 @@
                   <input type="password" class="form-control" id="pass2" required>
                   <br>
               </div>
+              <span id="error2"></span>
 
                 <!-- Mensajes de Verificación -->
 
@@ -344,4 +346,5 @@
       }, { minimumLength: 7} );
   })
   </script>
+  <script src="validaciones.js"></script>
 </html>
