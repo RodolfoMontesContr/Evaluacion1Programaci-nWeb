@@ -201,6 +201,7 @@ header{
 
 #viewPassword{
     cursor:pointer;
+
 }
 
 body{
@@ -244,5 +245,14 @@ body{
     background-color: aqua;
     color: azure;
 
+}
+
+
+.ocultar {
+    display: none;
+}
+ 
+.mostrar {
+    display: block;
 }
 

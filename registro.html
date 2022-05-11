@@ -29,99 +29,145 @@
                       $("#alertaNombre").hide();
                   }
               });
+
+              $("#alertaEmail").hide();
+              var mensaje = "";
+              $("#alertaEmail").html(mensaje);
+              //si nombre pierde el foco
               $("#email").focusout(function(){
                   // si no hay caracteres, mostramos alerta
                   if ($("#email").val().trim().length == 0) {
                       mensaje = "Debe ingresar un Email";
-                      $("#alertaNombre").html(mensaje);
-                      $("#alertaNombre").show(mensaje);
-                      event.preventDefault();
+                      $("#alertaEmail").html(mensaje);
+                      $("#alertaEmail").show();
 
                   } else {
                       //si hay caracteres, ocultamos la alerta
-                      $("#alertaNombre").hide();
+                      $("#alertaEmail").hide();
                   }
               });
 
-              $("#rut").focusout(function(){
-                var rut = $("#rut").val();
-                $.validateRut(rut);
-              });
-  
-              $("#formulario").submit(function(){
-                  debugger;
-                  if(mensaje.length >= 0){
-                  
-                      event.preventDefault();
-                  }
-              });
-
-              $("#alertaNombre").hide();
+              $("#alertaRUT").hide();
               var mensaje = "";
+              $("#alertaRUT").html(mensaje);
+              //si nombre pierde el foco
+              $("#rut").focusout(function(){
+                  // si no hay caracteres, mostramos alerta
+                  if ($("#rut").val().trim().length == 0) {
+                      mensaje = "Debe ingresar un Rut";
+                      $("#alertaRUT").html(mensaje);
+                      $("#alertaRUT").show();
 
-              $("#alertaNombre").html(mensaje);
+                  } else {
+                      //si hay caracteres, ocultamos la alerta
+                      $("#alertaRut").hide();
+                  }
+              });
+
+              $("#alertaDireccion").hide();
+              var mensaje = "";
+              $("#alertaDireccion").html(mensaje);
+              //si nombre pierde el foco
               $("#direccion").focusout(function(){
                   // si no hay caracteres, mostramos alerta
                   if ($("#direccion").val().trim().length == 0) {
                       mensaje = "Debe ingresar una Dirección";
-                      $("#alertaNombre").html(mensaje);
-                      $("#alertaNombre").show(mensaje);
-                      event.preventDefault();
+                      $("#alertaDireccion").html(mensaje);
+                      $("#alertaDireccion").show();
 
-                    } else {
+                  } else {
                       //si hay caracteres, ocultamos la alerta
-                      $("#alertaNombre").hide();
+                      $("#alertaDireccion").hide();
                   }
-                });
+              });
 
-                $("#alertaNombre").hide();
+              $("#alertaTelefono").hide();
               var mensaje = "";
-
-              $("#alertaNombre").html(mensaje);
+              $("#alertaTelefono").html(mensaje);
+              //si nombre pierde el foco
               $("#telefono").focusout(function(){
                   // si no hay caracteres, mostramos alerta
                   if ($("#telefono").val().trim().length == 0) {
-                      mensaje = "Debe ingresar un Teléfono/Celular";
-                      $("#alertaNombre").html(mensaje);
-                      $("#alertaNombre").show(mensaje);
-                      event.preventDefault();
+                      mensaje = "Debe ingresar un Telefóno/Celular";
+                      $("#alertaTelefono").html(mensaje);
+                      $("#alertaTelefono").show();
 
-                    } else {
+                  } else {
                       //si hay caracteres, ocultamos la alerta
-                      $("#alertaNombre").hide();
+                      $("#alertaTelefono").hide();
                   }
-                });
-
-                $("#alertaNombre").hide();
-              var mensaje = "";
-
-              $("#alertaNombre").html(mensaje);
-              $("#contraseña").focusout(function(){
-                  // si no hay caracteres, mostramos alerta
-                  if ($("#contraseña").val().trim().length == 0) {
-                      mensaje = "Debe ingresar una Contraseña";
-                      $("#alertaNombre").html(mensaje);
-                      $("#alertaNombre").show(mensaje);
-                      event.preventDefault();
-
-                    } else {
-                      //si hay caracteres, ocultamos la alerta
-                      $("#alertaNombre").hide();
-                  }
-                }) 
-            });
-
-            if($('div').smockValidateEqualPass('form #password1', 'form #password2')){
-              mensaje = "Contraseñas no son iguales";
-                      $("#alertaContraseña").html(mensaje);
-                      $("#alertaContraseña").show(mensaje);
-                      event.preventDefault();
-
-                    } else {
-                      //si hay caracteres, ocultamos la alerta
-                      $("#alertaContraseña").hide();
-            }
+              });
             
+            function verificarPasswords() {
+ 
+             // Acá va el código 
+              // Ontenemos los valores de los campos de contraseñas 
+              pass1 = document.getElementById('pass1');
+              pass2 = document.getElementById('pass2');
+              // Verificamos si las constraseñas no coinciden
+              if (pass1.value != pass2.value) {
+              
+              // Si las constraseñas no coinciden mostramos un mensaje
+              document.getElementById("error").classList.add("mostrar");
+
+              return false;
+              }
+
+              else {
+
+              // Si las contraseñas coinciden ocultamos el mensaje de error
+              document.getElementById("error").classList.remove("mostrar");
+
+              // Mostramos un mensaje mencionando que las Contraseñas coinciden
+              document.getElementById("ok").classList.remove("ocultar");
+
+              // Desabilitamos el botón de login
+              document.getElementById("Enviar").disabled = true;
+
+              // Refrescamos la página (Simulación de envío del formulario)
+              setTimeout(function() {
+              location.reload();
+              }, 3000);
+
+              return true;
+              }
+            }
+          });  
+
+            function verificarPasswords() {
+ 
+            // Ontenemos los valores de los campos de contraseñas 
+            pass1 = document.getElementById('pass1');
+            pass2 = document.getElementById('pass2');
+
+            // Verificamos si las constraseñas no coinciden 
+            if (pass1.value != pass2.value) {
+
+                // Si las constraseñas no coinciden mostramos un mensaje 
+                document.getElementById("error").classList.add("mostrar");
+
+                return false;
+            } else {
+
+                // Si las contraseñas coinciden ocultamos el mensaje de error
+                document.getElementById("error").classList.remove("mostrar");
+
+                // Mostramos un mensaje mencionando que las Contraseñas coinciden 
+                document.getElementById("ok").classList.remove("ocultar");
+
+                // Desabilitamos el botón de login 
+                document.getElementById("Enviar").disabled = true;
+
+                // Refrescamos la página (Simulación de envío del formulario) 
+                setTimeout(function() {
+                    location.reload();
+                }, 3000);
+
+                return true;
+            }
+
+            }
+      
       </script>
 
 </head>
@@ -182,7 +228,7 @@
               </h1>
 
                 <div class="form-group">
-                  <div class="alert alert-danger" id="alertaNombre alertaNombre" role="alert">
+                  <div class="alert alert-danger" id="alertaNombre" role="alert">
                   </div>
                   <label for="nombre">Nombre Completo:</label>
                   <input type="text" class="form-control" name="nombre" id="nombre">
@@ -191,6 +237,8 @@
 
                 <br>
                 <div class="form-group">
+                  <div class="alert alert-danger" id="alertaEmail" role="alert">
+                  </div>
                   <label for="email">Email:</label>
                   <input type="email" class="form-control" name="email" id="email">
                   <br>
@@ -199,14 +247,18 @@
                 <br>
                 <div>
                   <div class="form-group">
+                    <div class="alert alert-danger" id="alertaRUT" role="alert">
+                    </div>
                   <label for="rut">RUT:</label>
                   </div>
-                  <input type="test" class="form-control" id="rut" name="rut"/>
+                  <input type="test" class="form-control" name="rut" id="rut">
                   <br>
                 </div>
 
                 <br>
                 <div class="form-group">
+                  <div class="alert alert-danger" id="alertaDireccion" role="alert">
+                  </div>
                   <label for="direccion">Direccion:</label>
                   <input type="text" class="form-control" name="direccion" id="direccion">
                   <br>
@@ -215,23 +267,39 @@
                 <br>
                 <div>
                   <div class="form-group"></div>
+                  <div class="alert alert-danger" id="alertaTelefono" role="alert">
+                  </div>
                   <label for="telefono">Teléfono/Celular:</label>
                   <input type="text" class="form-control" name="telefono" id="telefono">
                   <br>
                 </div>
 
                 <br>
-                <div>
-                  <label for="contraseña">Contraseña:</label>
-                  <input type="password" type="text" class="form-control" id="password1">
+
+                <div id="msg"></div>
+
+                <!-- Mensajes de Verificación -->
+
+                <div id="error" class="alert alert-danger ocultar" role="alert">
+                    Las Contraseñas no coinciden, vuelve a intentar !
+                </div>
+                <div id="ok" class="alert alert-success ocultar" role="alert">
+                    Las Contraseñas coinciden ! (Procesando formulario ... )
+                </div>
+
+                <!-- Fin Mensajes de Verificación -->
+
+                <div class="form-group">
+                  <label for="pass1">Contraseña:</label>
+                  <input type="password" class="form-control" id="pass1" required>
                   <br>
+              </div>
+
+              <div class="form-group">
+                  <label for="pass2">Confirmar Contraseña:</label>
+                  <input type="password" class="form-control" id="pass2" required>
                   <br>
-                  <div>
-                  <label for="confirmarcontraseña">Confirmar Contraseña:</label>
-                  <br>
-                  <input type="password" type="text" class="form-control" id="password2" required>
-                  <br>
-                </div>  
+              </div>
 
                 <input type="submit" value="Enviar" class="btn btn-primary">
                 <br>
@@ -239,10 +307,6 @@
               </form>
           </div>
       </div>
-
-      
-      
-            
 
     </main>
 
