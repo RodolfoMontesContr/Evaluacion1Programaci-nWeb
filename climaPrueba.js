@@ -26,7 +26,7 @@ window.addEventListener('load', ()=> {
             .then( data => {
                 
                 
-                let temp = Math.round(data.main.temp)
+                let temp = Math.round(data.main.temp - 273)
                 
                 temperaturaValor.textContent = `${temp} ° C`
 
