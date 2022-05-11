@@ -202,3 +202,12 @@ header{
 #viewPassword{
     cursor:pointer;
   }
+
+
+  .ocultar {
+    display: none;
+}
+ 
+.mostrar {
+    display: block;
+}
