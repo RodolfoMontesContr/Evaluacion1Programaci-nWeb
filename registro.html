@@ -11,6 +11,7 @@
     <title>Registro</title>
 
         <script>
+          $(document).ready(function(){
           $("#Registro").ready(function(){
               //Ocultar Alerta cuando cargue la pagina
               $("#alertaNombre").hide();
@@ -80,6 +81,46 @@
                   }
               })
           });
+
+          $("#contra").hide();
+        
+          $("#contra").hide();
+          var mensaje = "";
+          $("#contra").html(mensaje);
+          //si nombre pierde el foco
+          $("#pass1").focusout(function(){
+            // si no hay caracteres, mostramos alerta
+              if ($("#pass1").val().trim().length == 0) {
+                  mensaje = "Debe ingresar una Contraseña";
+                    $("#contra").html(mensaje);
+                    $("#contra").show();
+
+              } else {
+                  //si hay caracteres, ocultamos la alerta
+                  $("#contra").hide();
+                }
+          });
+
+          $("#contra2").hide();
+        
+          $("#contra2").hide();
+          var mensaje = "";
+          $("#contra2").html(mensaje);
+          //si nombre pierde el foco
+          $("#pass2").focusout(function(){
+            // si no hay caracteres, mostramos alerta
+              if ($("#pass2").val().trim().length == 0) {
+                  mensaje = "Debe ingresar una Contraseña";
+                    $("#contra2").html(mensaje);
+                    $("#contra2").show();
+
+              } else {
+                  //si hay caracteres, ocultamos la alerta
+                  $("#contra2").hide();
+                }
+          });
+        });
+
       
       </script>
 
@@ -190,6 +231,8 @@
                 <br>
 
                 <div class="form-group">
+                  <div class="alert alert-danger" id="contra" role="alert">
+                  </div>
                   <label for="pass1">Contraseña:</label>
                   <input type="password" class="form-control" id="pass1" value="">
                   <div id="error1"></div>
@@ -197,6 +240,8 @@
               </div>
 
               <div class="form-group">
+                <div class="alert alert-danger" id="contra2" role="alert">
+                </div>
                   <label for="pass2">Confirmar Contraseña:</label>
                   <input type="password" class="form-control" id="pass2" value="">
                   <span id="error2"></span>
