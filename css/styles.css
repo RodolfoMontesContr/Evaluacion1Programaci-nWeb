@@ -213,48 +213,34 @@ body{
 
 }
 
-#contenedor{
-
-    text-align: center;
+.contenedor{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
+    justify-content: end;
+    width: 100%;
 }
 
 #caja1, #caja2, #caja3{
-
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 20%;
-    width: 200px;
-    height: 200px;
+    display: flex;
+    text-align: end;
+    column-gap: 10px;
+    justify-content: flex-end;
+}
+#cajasub{
+    display: flex;
+    text-align: end;
+    column-gap: 10px;
+    justify-content: flex-end;
+    padding-top: 8px;
+    padding-right: 75px;
 }
 
-#caja1{
-    background-color: aqua;
-    color: azure;
-}
-
-#caja2{
-    background-color: aquamarine;
-    color: azure;
-}
-
-#caja3{
-    background-color: aqua;
-    color: azure;
-
-}
-
-label, input {
-    display: block;
-}
-
-div#error2 {
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-    position: relative;
-    top: 5px;
+@media screen and (max-width: 425px){
+    #cajasub{
+        display: flex;
+        text-align: end;
+        column-gap: 10px;
+        justify-content: flex-end;
+        padding-top: 8px;
+    }
 }
