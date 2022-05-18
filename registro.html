@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Registro</title>
-
         <script>
           $(document).ready(function(){
           $("#Registro").ready(function(){
@@ -120,13 +119,21 @@
                 }
           });
         });
-
-      
       </script>
-
 </head>
-
 <header>
+  <div class="container">
+    <div id="caja1">
+      <img id="icono-animado" src="" alt="" height="40" width="40">
+      <div id="cajasub">
+        <p id="temperatura-valor" class="text-right"></p>
+        <p id="temperatura-descripcion" hidden></p>
+        <p id="ubicacion"></p>
+        <p style="color: white;">Veloc. del Viento</p>
+        <p id="viento-velocidad" style="color: white;"></p>
+      </div>
+    </div>
+    </div>
   <nav class="navbar navbar-expand-lg navbar-light center">
       <div class="container-fluid" style="width: 500px">
           <form class="d-flex col-8 pe-3">
@@ -167,15 +174,11 @@
 <body class="page_color">
     <div class="container-fluid">
       <div class="row">
-        
-        <p class="h1 text-center">Tienda de mascotas</p>
-        <a href=""> 
-          <img src="https://www.aaha.org/contentassets/e9c132b89136484987476fcdb26e2b00/2018-7-25-istock-157610688-fight-blog.jpg" alt="#"  class="gato img-fluid mx-auto d-block"> </a>
           <main class="pb-5 pt-5">
             
             <form  id="formulario" class="border border-dark colores_elementos">
               
-              <h1>
+              <h1 class="h1">
                 Registro
                 <br>
                 <br>
@@ -271,7 +274,7 @@
               <p class="footer__titulos " >Beneficios</p>
               <a href="./ofertas.html" class="footer__items " >Ofertas</a>
               <a href="./nuestrosdescuentos.html" class="footer__items " >Nuestros descuentos</a>
-              <a href="#" class="footer__items " >Atención en otros locales</a>
+              <a href="atencionlocales.html" class="footer__items " >Atención en otros locales</a>
           </div>
           <div class="footer__lista--div">
               <p class="footer__titulos " >Redes sociales</p>
@@ -288,4 +291,5 @@
 </body>
 
   <script src="validaciones.js"></script>
+  <script src="climaPrueba.js"></script>
 </html>

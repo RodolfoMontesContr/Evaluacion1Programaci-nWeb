@@ -235,6 +235,7 @@ body{
     padding-right: 75px;
 }
 
+
 @media screen and (max-width: 425px){
     #cajasub{
         display: flex;
@@ -243,4 +244,33 @@ body{
         justify-content: flex-end;
         padding-top: 8px;
     }
+
+}
+
+
+.resultados {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.result {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	height: 400px;
+	width: 300px;
+}
+.result img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.caja-resultado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
