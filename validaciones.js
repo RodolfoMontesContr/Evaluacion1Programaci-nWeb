@@ -17,6 +17,7 @@ $(document).ready(function() {
             $("#error2").show();
         }
     });
+    $('#errorfono').hide();
     $('#telefono').keyup(function(){
         var fono = $('#telefono').val();
         if (fono.length == 12 ){
@@ -24,6 +25,7 @@ $(document).ready(function() {
         }
         else{
             $('#errorfono').text("Numero de telefono incorrecto").css("color", "red");
+            $('#errorfono').show();
         
         }
     });
