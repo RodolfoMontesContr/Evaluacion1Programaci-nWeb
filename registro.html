@@ -154,8 +154,7 @@
                     $("#alertaRut").hide();
                   }
                 });
-
-                $("#Enviar").click(function(e){e.preventDefault();})
+                 
         });
       </script>
 </head>
@@ -226,7 +225,7 @@
                   <div class="alert alert-danger" id="alertaNombre" role="alert">
                   </div>
                   <label for="nombre">Nombre Completo:</label>
-                  <input type="text" class="form-control" name="nombre" id="nombre">
+                  <input type="text" class="form-control" name="nombre" id="nombre" required>
                   <br>
                 </div>
 
@@ -235,7 +234,7 @@
                   <div class="alert alert-danger" id="alertaEmail" role="alert">
                   </div>
                   <label for="email">Email:</label>
-                  <input type="email" class="form-control" name="email" id="email">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Ejemplo@ejemplo.cl" required>
                   <br>
                 </div>
 
@@ -246,7 +245,7 @@
                     </div>
                   <label for="rut">RUT:</label>
                   </div>
-                  <input type="text" class="form-control" name="rut" id="rut">
+                  <input type="text" class="form-control" name="rut" id="rut" placeholder="11.111.111-K" required oninput="checkRut(this)">
                   <br>
                 </div>
                 <br>
@@ -254,7 +253,7 @@
                   <div class="alert alert-danger" id="alertaDireccion" role="alert">
                   </div>
                   <label for="direccion">Direccion:</label>
-                  <input type="text" class="form-control" name="direccion" id="direccion">
+                  <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Los Leones 1234" required>
                   <br>
                 </div>
 
@@ -265,7 +264,7 @@
                   </div>
                   <span id="errorfono"></span>
                   <label for="telefono">Teléfono/Celular:</label>
-                  <input type="tel" alt="number" class="form-control" name="telefono" id="telefono" placeholder="+56911111111" size="12">
+                  <input type="tel" alt="number" class="form-control" name="telefono" id="telefono" placeholder="+56911111111" size="12" required>
                   <br>
                 </div>
 
@@ -275,7 +274,7 @@
                   <div class="alert alert-danger" id="contra" role="alert">
                   </div>
                   <label for="pass1">Contraseña:</label>
-                  <input type="password" class="form-control" id="pass1" value="">
+                  <input type="password" class="form-control" id="pass1" value="" required>
                   <div id="error1"></div>
                   <br>
               </div>
@@ -284,11 +283,12 @@
                 <div class="alert alert-danger" id="contra2" role="alert">
                 </div>
                   <label for="pass2">Confirmar Contraseña:</label>
-                  <input type="password" class="form-control" id="pass2" value="">
-                  <span id="error2"></span>
+                  <input type="password" class="form-control" id="pass2" value="" required>
+                  <br>
+                  <div id="error2" class="alert alert-danger" ></div>
                   <br>
               </div>
-              <span id="error2"></span>
+              
 
 
                 <button type="submit" id="Enviar" class="btn btn-primary">Enviar</button>
