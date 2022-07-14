@@ -31,6 +31,7 @@ $(document).ready(function() {
     });
 });
 
+
 function checkRut(rut) {
   // Despejar Puntos
   var valor = rut.value.replace('.','');
